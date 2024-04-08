@@ -12,7 +12,7 @@ namespace LibraryTests
 
         
         [TestMethod]
-        public void HasManyUnreturnedBooks_Test1_Morebooks()
+        public void HasManyUnreturnedBooks_Morebooks_ExpectedTrue()
         {
             Loan loan=new Loan();
             Client client = new Client("Ruxi", "ruxy@gmail.com", true, 2);
@@ -21,7 +21,7 @@ namespace LibraryTests
         }
 
         [TestMethod]
-        public void HasManyUnreturnedBooks_Test2_LessBooks()
+        public void HasManyUnreturnedBooks_LessBooks_ExpectedFalse()
         {
             Loan loan=new Loan();
             Client client = new Client("Ruxi", "ruxy@gmail.com", true, 2);
@@ -30,7 +30,7 @@ namespace LibraryTests
         }
 
         [TestMethod]
-        public void HasManyUnreturnedBooks_Test3_EqualNumberOfBooks()
+        public void HasManyUnreturnedBooks_EqualNumberOfBooks_ExpectedFalse()
         {
             Loan loan = new Loan();
             Client client = new Client("Ruxi", "ruxy@gmail.com", true, 2);
