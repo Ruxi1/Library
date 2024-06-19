@@ -8,6 +8,7 @@ namespace Library
 {
     public class LinqAuthorSort : SortStrategy
     {
+        Subject subject = new Subject();
         public override void Sort(List<Book> list)
         {
             var newlist=list.OrderBy(x => x.GetAuthor()).ThenBy(x=>x.GetTitle()).ToList();
@@ -17,6 +18,7 @@ namespace Library
                 
                 list.Add(newlist[i]);
             }
+            subject.NotifyAll(this, EventArgs.Empty);
         }
     }
 }

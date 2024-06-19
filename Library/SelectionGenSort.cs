@@ -8,6 +8,7 @@ namespace Library
 {
     public class SelectionGenSort : SortStrategy
     {
+        Subject subject = new Subject();
         public override void Sort(List<Book> list)
         {
             for(int i = 0; i < list.Count-1; i++)
@@ -18,6 +19,7 @@ namespace Library
                         (list[i], list[j]) = (list[j], list[i]);
                 }
             }
+            subject.NotifyAll(this, EventArgs.Empty);
         }
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="IObserver.cs" />
     <Compile Include="LinqAuthorSort.cs" />
     <Compile Include="SelectionGenSort.cs" />
     <Compile Include="SortStrategy.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="QuickTitleSort.cs" />
     <Compile Include="Read.cs" />
     <Compile Include="SortedList.cs" />
+    <Compile Include="Subject.cs" />
     <Compile Include="Subscription.cs" />
     <Compile Include="Visitor.cs" />
     <EmbeddedResource Include="Form1.resx">

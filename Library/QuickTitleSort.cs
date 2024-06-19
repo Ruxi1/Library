@@ -8,10 +8,12 @@ namespace Library
 {
     public class QuickTitleSort : SortStrategy
     {
+        Subject subject = new Subject();
         public override void Sort(List<Book> list)
         {
             
             Sort(list, 0, list.Count - 1);
+            subject.NotifyAll(this, EventArgs.Empty);
         }
 
         private static void Sort(List<Book> list, int left, int right)
